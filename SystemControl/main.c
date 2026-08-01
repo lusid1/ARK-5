@@ -29,7 +29,8 @@
 #include "sysmem.h"
 #include "nidresolver.h"
 #include "exception.h"
-
+#include "pgd.h"
+#include "np9660_patch.h"
 
 PSP_MODULE_INFO("SystemControl", 0x3007, 4, 0);
 
@@ -60,6 +61,8 @@ int module_start(SceSize args, void * argp)
     patchModuleManager();
     patchInterruptMan();
     patchMemlmd();
+
+
 
     // Flush Cache
     sctrlFlushCache();

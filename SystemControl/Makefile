@@ -38,6 +38,8 @@ OBJS = \
 	src/utility.o \
 	src/patches.o \
 	src/missingfunc.o \
+	src/pgd.o \
+	src/np9660_patch.o \
 	src/setlongjmp.o
 	
 all: $(TARGET).prx
